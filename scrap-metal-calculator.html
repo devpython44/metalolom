@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор металлолома</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="scrap-metal-calculator.html">Калькулятор металлолома</a></li>
+        <li><a href="regular-calculator.html">Обычный калькулятор</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>Калькулятор металла</h1>
+    <label for="weight">Введите вес металла в кг:</label>
+    <input type="number" id="weight" placeholder="Введите вес" min="0">
+
+    <label for="metal">Выберите тип металла:</label>
+    <select id="metal">
+        <option value="черный металл">Черный металл</option>
+        <option value="медь">Медь</option>
+        <option value="латунь">Латунь</option>
+        <option value="алюминий">Алюминий</option>
+        <option value="нержавейка">Нержавейка</option>
+        <option value="свинец">Свинец</option>
+        <option value="тнж">ТНЖ (аккумуляторы)</option>
+        <option value="титан">Титан</option>
+        <option value="латунь стружка/радиатор">Латунь стружка/радиатор</option>
+        <option value="стружка медная">Стружка медная</option>
+    </select>
+
+    <button onclick="calculatePrice()">Рассчитать стоимость</button>
+    <div id="result" class="result"></div>
+    <div id="error" class="error"></div>
+</div>
+
+<div class="chatbot-circle" onclick="toggleChatbot()">💬</div>
+
+<div class="chatbot" id="chatbot">
+    <h2>Приемка</h2>
+    <div class="bot-buttons">
+        <button onclick="getAnswer('цена')">Цена?</button>
+        <button onclick="getAnswer('принимают ли ржавый металл')">Принимают ли ржавый металл?</button>
+        <button onclick="getAnswer('как часто меняются цены на металл')">Как часто меняются цены на металл?</button>
+        <button onclick="getAnswer('какой металл самый ценный')">Какой металл самый ценный?</button>
+    </div>    
+    <div id="botAnswer" class="result"></div>
+</div>
+
+<script>
+const PRICES = {
+    'черный металл': 5.0,
+    'медь': 260.0,
+    'латунь': 170.0,
+    'алюминий': 42.0,
+    'нержавейка': 35.0,
+    'свинец': 40.0,
+    'тнж': 10.0,
+    'титан': 80.0,
+    'латунь стружка/радиатор': 155.0,
+    'стружка медная': 200.0,
+};
+
+function calculatePrice() {
+    const weight = parseFloat(document.getElementById("weight").value);
+    const metal = document.getElementById("metal").value;
+    const resultDiv = document.getElementById("result");
+    const errorDiv = document.getElementById("error");
+
+    if (isNaN(weight) || weight <= 0) {
+        errorDiv.textContent = "Введи корректное число.";
+        resultDiv.textContent = "";
+        return;
+    }
+
+    const price = PRICES[metal];
+    const totalPrice = weight * price;
+
+    resultDiv.textContent = `Цена ${weight} кг ${metal} составляет ${totalPrice.toFixed(2)} грн.`;
+    errorDiv.textContent = "";
+}
+
+document.getElementById('weight').addEventListener('input', function (e) {
+    this.value = this.value.replace(/[^0-9.]/g, '');
+});
+
+function toggleChatbot() {
+    const chatbot = document.getElementById("chatbot");
+    chatbot.classList.toggle("open");
+}
+
+function getAnswer(question) {
+    const botAnswerDiv = document.getElementById("botAnswer");
+
+    if (question === "цена") {
+        botAnswerDiv.textContent = "Цены зависят от типа металла и веса. Введи эти данные, чтобы узнать точную цену."; 
+    } else if (question === "принимают ли ржавый металл") {
+        botAnswerDiv.textContent = "Ржавый металл принимают, но цена ниже из-за плохого качества.";
+    } else if (question === "как часто меняются цены на металл") {
+        botAnswerDiv.textContent = "Раз в год и палка стреляет. Рекомендую уточнять цены перед сдачей.";
+    } else if (question === "какой металл самый ценный") {
+        botAnswerDiv.textContent = "Самая ценная — медь, затем латунь и алюминий. Черный металл — самый дешевый.";
+    }
+}
+</script>
+</body>
+</html>
