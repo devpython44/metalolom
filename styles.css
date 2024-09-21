@@ -51,7 +51,7 @@ body {
 
 nav {
     width: 100%;
-    background: radial-gradient(circle at top right,#1C1C1C, #4f4f4f, #1C1C1C);
+    background: radial-gradient(circle at top right,#2E2E2E, #4f4f4f, #2E2E2E);
     padding: 10px 0;
     position: fixed;
     top: 0;
@@ -91,7 +91,7 @@ nav a {
 h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #1C1C1C;
+    color: #4f4f4f;
     font-weight: 700;
     animation: slideInLeft 1s ease-out;
 }
@@ -100,7 +100,7 @@ label {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    color: #333333;
+    color: #4f4f4f;
     font-weight: 700;
 }
 
@@ -126,7 +126,7 @@ button {
     margin-top: 1.5rem;
     border-radius: 30px;
     border: none;
-    background: linear-gradient(135deg, #1C1C1C, #4f4f4f, #1C1C1C);
+    background: linear-gradient(135deg, #2E2E2E, #4f4f4f, #2E2E2E);
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -270,6 +270,61 @@ button:hover {
     color: red;
     margin-top: 10px;
     font-size: 14px;
+}
+/* Отдел помощи
+Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white; /* Белый текст */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+#earnings {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff; /* Белый фон для кнопки */
+    color: #4CAF50; /* Зеленый текст */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4CAF50; /* Зеленый фон при наведении */
+    color: white; /* Белый текст при наведении */
 }
 
 /* Адаптация для мобильных устройств */
