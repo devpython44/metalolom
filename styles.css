@@ -185,7 +185,7 @@ button:hover {
     background: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
+ 
 /* Стили для чат-бота */
 .chatbot-circle {
     position: fixed;
@@ -193,7 +193,7 @@ button:hover {
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color: #007bff;
+    background-color: #1C1C1C;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -271,6 +271,7 @@ button:hover {
     margin-top: 10px;
     font-size: 14px;
 }
+
 /* Отдел помощи
 Сброс стилей */
 * {
