@@ -272,62 +272,6 @@ button:hover {
     font-size: 14px;
 }
 
-/* Отдел помощи
-Сброс стилей */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #4CAF50; /* Зеленый фон */
-    color: white; /* Белый текст */
-    line-height: 1.6;
-    padding: 20px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 20px 0 10px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-#earnings {
-    text-align: center;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff; /* Белый фон для кнопки */
-    color: #4CAF50; /* Зеленый текст */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #4CAF50; /* Зеленый фон при наведении */
-    color: white; /* Белый текст при наведении */
-}
-
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .chatbot {
