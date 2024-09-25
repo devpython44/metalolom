@@ -73,7 +73,7 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 750;
 }
 
 .container {
@@ -184,92 +184,6 @@ button:hover {
     text-align: right;
     background: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
- 
-/* Стили для чат-бота */
-.chatbot-circle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #1C1C1C;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.chatbot {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    width: 300px;
-    max-height: 400px;
-    background-color: #A4A4A4;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    padding: 15px;
-    color: white;
-}
-
-.chatbot.open {
-    display: flex;
-}
-
-.chatbot h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: white;
-}
-
-.chatbot input {
-    width: calc(100% - 10px);
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid wheat;
-    border-radius: 5px;
-    background-color: wheat;
-    color: gray;
-}
-
-.chatbot button {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.chatbot .bot-buttons button {
-    display: block;
-    width: 100%;
-    margin-bottom: 5px;
-    background-color: #555;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 0;
-}
-
-.chatbot .result {
-    margin-top: 10px;
-    font-size: 14px;
-    color: white;
-}
-
-.chatbot .error {
-    color: red;
-    margin-top: 10px;
-    font-size: 14px;
 }
 
 /* Адаптация для мобильных устройств */
