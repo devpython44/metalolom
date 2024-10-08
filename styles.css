@@ -186,24 +186,19 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .chatbot {
-        width: 90%;
-        right: 5%;
-        bottom: 80px;
-    }
-
-    .chatbot-circle {
-        bottom: 20px;
-        right: 10px;
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+@media (hover: hover) {
+    button:hover {
+        background-color: #4f4f4f;
     }
 }
 
-/* Адаптация под мобильные устройства 2 */
+@media (hover: none) {
+    button:active {
+        background-color: #4f4f4f;
+    }
+}
+
+/* Адаптация под мобильные устройства */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
