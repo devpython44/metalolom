@@ -1,4 +1,4 @@
-/* Подключаем шрифты и сбрасываем стили */
+/* Стили сайта */
 * {
     margin: 0;
     padding: 0;
@@ -16,9 +16,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    margin: 0;
     overflow: hidden;
-    font-size: 1rem;
 }
 
 @keyframes gradientAnimation {
@@ -30,7 +28,7 @@ body {
     }
 }
 
-/* Общие анимации */
+/* Анимации */
 .fadeIn {
     animation: fadeIn 1s ease-out;
 }
@@ -51,7 +49,7 @@ body {
 
 nav {
     width: 100%;
-    background: radial-gradient(circle at top right,#2E2E2E, #4f4f4f, #2E2E2E);
+    background: radial-gradient(circle at top right, #2E2E2E, #4f4f4f, #2E2E2E);
     padding: 10px 0;
     position: fixed;
     top: 0;
@@ -73,7 +71,7 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 750;
+    font-weight: 700;
 }
 
 .container {
@@ -139,17 +137,17 @@ button:hover {
     transform: translateY(-3px);
 }
 
-.result, .error {
+.result {
     margin-top: 1.5rem;
     font-size: 1.2rem;
     font-weight: bold;
-}
-
-.result {
     color: #4caf50;
 }
 
 .error {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: #B40404;
 }
 
@@ -186,34 +184,22 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-@media (hover: hover) {
-    button:hover {
-        background-color: #4f4f4f;
-    }
-}
-
-@media (hover: none) {
-    button:active {
-        background-color: #4f4f4f;
-    }
-}
-
-/* Адаптация под мобильные устройства */
-@media (max-width: 480px) {
+/* Адаптация под экраны шириной до 540px (например, Poco X3 Pro) */
+@media (max-width: 540px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     label, input, select, button {
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
 
     .container {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .calc-buttons button {
-        font-size: 0.875rem;
-        padding: 0.75rem;
+        font-size: 1rem;
+        padding: 1rem;
     }
 }
